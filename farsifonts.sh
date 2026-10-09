@@ -118,6 +118,12 @@ if (( ! OFFLINE )); then
   choose_downloader || exit 1
   info "Downloader: $DOWNLOADER"
 fi
+# Refresh an older default catalog after switching the source to this repository.
+if (( ! OFFLINE && ! REFRESH )) && [[ -z ${PERSIAN_FONTS_CATALOG_URL:-} && -s $CATALOG ]] &&
+   ! grep -q '^RFonts|' "$CATALOG"; then
+  info 'Cached catalog is outdated; refreshing from the repository'
+  REFRESH=1
+fi
 if [[ ! -s $CATALOG || $REFRESH -eq 1 ]]; then
   if ((OFFLINE)); then err "No cached catalog at $CATALOG"; exit 1; fi
   info 'Fetching font catalog...'
@@ -141,6 +147,10 @@ repo_url_for_file() {
 }
 while IFS='|' read -r name filename url description rest || [[ -n ${name:-} ]]; do
   [[ -n ${name:-} && -n ${filename:-} && -n ${url:-} ]] || continue
+  # Migrate legacy catalog names to the filename vendored in this repository.
+  case ${name,,} in
+    xbnilufar|xbniloofar|xb\ niloofar|xb\ nilufar) filename='XB Niloofar.ttf' ;;
+  esac
   [[ $name != *'/'* && $name != *'\\'* && $name != '.' && $name != '..' ]] || { warn "Skipping unsafe font name: $name"; continue; }
   [[ $filename == "$(basename -- "$filename")" && $filename != .* && $filename != *\* ]] || { warn "Skipping unsafe filename: $filename"; continue; }
   case ${filename,,} in *.zip|*.ttf|*.otf) ;; *) warn "Skipping unsupported file: $filename"; continue;; esac
