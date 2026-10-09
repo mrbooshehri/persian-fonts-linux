@@ -2,7 +2,8 @@
 # Improved Persian fonts installer, based on fzerorubigd/persian-fonts-linux.
 set -uo pipefail
 
-CATALOG_URL=${PERSIAN_FONTS_CATALOG_URL:-http://fzero.rubi.gd/persian-fonts-linux/list}
+FONT_BASE_URL=${PERSIAN_FONTS_BASE_URL:-https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts}
+CATALOG_URL=${PERSIAN_FONTS_CATALOG_URL:-$FONT_BASE_URL/list.txt}
 CACHE_DIR=${XDG_CACHE_HOME:-$HOME/.cache}/persian-fonts
 FONT_DIR=${XDG_DATA_HOME:-$HOME/.local/share}/fonts/persian
 CATALOG=$CACHE_DIR/list.txt
@@ -29,6 +30,7 @@ Usage: farsifonts.sh [options]
   --help                 Show help
 Environment:
   PERSIAN_FONTS_CATALOG_URL  Override catalog URL
+  PERSIAN_FONTS_BASE_URL     Override repository font directory URL
   XDG_CACHE_HOME, XDG_DATA_HOME
 Notes: archives are cached and validated; no sudo is needed.
 HELP
@@ -132,28 +134,20 @@ else
 fi
 
 names=(); files=(); urls=(); descriptions=()
+repo_url_for_file() {
+  local filename=$1 encoded
+  encoded=${filename// /%20}
+  printf '%s/%s' "$FONT_BASE_URL" "$encoded"
+}
 while IFS='|' read -r name filename url description rest || [[ -n ${name:-} ]]; do
   [[ -n ${name:-} && -n ${filename:-} && -n ${url:-} ]] || continue
   [[ $name != *'/'* && $name != *'\\'* && $name != '.' && $name != '..' ]] || { warn "Skipping unsafe font name: $name"; continue; }
   [[ $filename == "$(basename -- "$filename")" && $filename != .* && $filename != *\* ]] || { warn "Skipping unsafe filename: $filename"; continue; }
   case ${filename,,} in *.zip|*.ttf|*.otf) ;; *) warn "Skipping unsupported file: $filename"; continue;; esac
   case $url in https://*|http://*) ;; *) warn "Skipping invalid URL for $name"; continue;; esac
-  names+=("$name"); files+=("$filename"); urls+=("$url"); descriptions+=("${description:-}")
+  names+=("$name"); files+=("$filename"); urls+=("$(repo_url_for_file "$filename")"); descriptions+=("${description:-}")
 done < "$CATALOG"
 ((${#names[@]})) || { err 'No usable entries in font catalog'; exit 1; }
-# Replace broken upstream catalog URLs (works with cached catalogs too).
-for i in "${!names[@]}"; do
-  case ${names[i],,} in
-    lalezar)
-      files[i]='Lalezar-Regular.ttf'
-      urls[i]='https://raw.githubusercontent.com/BornaIz/Lalezar/master/fonts/Lalezar-Regular.ttf'
-      ;;
-    xbnilufar|xbniloofar|xb\ niloofar|xb\ nilufar)
-      files[i]='XB Niloofar.ttf'
-      urls[i]='https://raw.githubusercontent.com/sinamomken/tehran-thesis/master/font/XB%20Niloofar.ttf'
-      ;;
-  esac
-done
 if ((LIST)); then
   for i in "${!names[@]}"; do printf '%3d) %s — %s\n' "$((i+1))" "${names[i]}" "${descriptions[i]}"; done
   exit 0

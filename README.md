@@ -45,6 +45,9 @@ The installer stores its cache under `${XDG_CACHE_HOME:-$HOME/.cache}/persian-fo
 and installs fonts under `${XDG_DATA_HOME:-$HOME/.local/share}/fonts/persian`.
 Set `XDG_CACHE_HOME`, `XDG_DATA_HOME`, or
 `PERSIAN_FONTS_CATALOG_URL` to customize these locations.
+By default, the catalog and font downloads come from this repository's
+`master/fonts` directory. Set `PERSIAN_FONTS_BASE_URL` to use another font
+directory.
 
 ## Bundled font files
 

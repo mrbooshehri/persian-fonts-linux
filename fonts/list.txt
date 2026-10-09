@@ -1,0 +1,36 @@
+Vazir|Vazir.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Vazir.zip|A Persian (Farsi) Font|
+FarsiFonts|FarsiFonts.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/FarsiFonts.zip|Full standard Persian fonts|
+BFonts|bfonts.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/bfonts.zip|B Fonts|
+IranianSans|irsans.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/irsans.zip|Iranian Sans|
+IranNastaliq|in.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/in.zip|Iran Nastaliq font|
+FPF|FPF.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/FPF.zip|Free Persian Font|
+Lalezar|Lalezar-Regular.ttf|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Lalezar-Regular.ttf|Lalezar font|
+XBZar|XBZar.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBZar.zip|XBZar|
+XBNilufar|XB Niloofar.ttf|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XB%20Niloofar.ttf|XB Niloofar|
+XBKhoramshahr|XBKhoramshahr.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBKhoramshahr.zip|XBKhoramshahr|
+XBKayhan|XBKayhan.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBKayhan.zip|XBKayhan|
+XBYaghout|XBYaghout.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBYaghout.zip|XBYaghout|
+XBRiyaz|XBRiyaz.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBRiyaz.zip|XBRiyaz|
+XBRoya|XBRoya.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBRoya.zip|XBRoya|
+XBShafigh|XBShafigh.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBShafigh.zip|XBShafigh|
+XBShafighKurd|XBShafighKurd.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBShafighKurd.zip|XBShafighKurd|
+XBShafighUzbek|XBShafighUzbek.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBShafighUzbek.zip|XBShafighUzbek|
+XBShiraz|XBShiraz.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBShiraz.zip|XBShiraz|
+XBSols|XBSols.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBSols.zip|XBSols|
+XBTitr|XBTitr.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBTitr.zip|XBTitr|
+XBTabriz|XBTabriz.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBTabriz.zip|XBTabriz|
+XBTraffic|XBTraffic.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBTraffic.zip|XBTraffic|
+XBVahid|XBVahid.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBVahid.zip|XBVahid|
+XBVosta|XBVosta.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBVosta.zip|XBVosta|
+XBYermook|XBYermook.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBYermook.zip|XBYermook|
+XBYas|XBYas.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBYas.zip|XBYas|
+XBZiba|XBZiba.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/XBZiba.zip|XBZiba|
+Tahoma|Tahoma.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Tahoma.zip|MS Tahoma|
+Samim|Samim.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Samim.zip|A Persian (Farsi) Font|
+Shabnam|Shabnam.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Shabnam.zip|A Persian (Farsi) Font|
+Sahel|Sahel.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Sahel.zip|A Persian (Farsi) Font|
+VazirCode|VazirCode.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/VazirCode.zip|A Persian monospaced font|
+Tanha|Tanha.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Tanha.zip|A Persian (Farsi) font|
+Nahid|Nahid.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Nahid.zip|A Persian (Farsi) font|
+Parastoo|Tarastoo.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/Tarastoo.zip|A Persian (Farsi) font|
+RFonts|RFonts.zip|https://raw.githubusercontent.com/mrbooshehri/persian-fonts-linux/master/fonts/RFonts.zip|Iranian font pack|
